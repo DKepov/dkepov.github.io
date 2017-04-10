@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dmitriy Kepov</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+	<style>
+		/*normalize*/
+		article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+			display: block
+			}
+
+		audio, canvas, video {
+			display: inline-block;
+			*display: inline;
+			*zoom: 1
+			}
+
+		audio:not([controls]) {
+			display: none;
+			height: 0
+			}
+
+		[hidden] {
+			display: none
+			}
+
+		html {
+			font-size: 100%;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%
+			}
+
+		html, button, input, select, textarea {
+			font-family: sans-serif
+			}
+
+		body {
+			margin: 0
+			}
+
+		a:focus {
+			outline: thin dotted
+			}
+
+		a:active, a:hover {
+			outline: 0
+			}
+
+		h1 {
+			font-size: 2em;
+			margin: .67em 0
+			}
+
+		h2 {
+			font-size: 1.5em;
+			margin: .83em 0
+			}
+
+		h3 {
+			font-size: 1.17em;
+			margin: 1em 0
+			}
+
+		h4 {
+			font-size: 1em;
+			margin: 1.33em 0
+			}
+
+		h5 {
+			font-size: .83em;
+			margin: 1.67em 0
+			}
+
+		h6 {
+			font-size: .75em;
+			margin: 2.33em 0
+			}
+
+		abbr[title] {
+			border-bottom: 1px dotted
+			}
+
+		b, strong {
+			font-weight: 700
+			}
+
+		blockquote {
+			margin: 1em 40px
+			}
+
+		dfn {
+			font-style: italic
+			}
+
+		mark {
+			background: #ff0;
+			color: #000
+			}
+
+		p, pre {
+			margin: 1em 0
+			}
+
+		code, kbd, pre, samp {
+			font-family: monospace, serif;
+			_font-family: "courier new", monospace;
+			font-size: 1em
+			}
+
+		pre {
+			white-space: pre;
+			white-space: pre-wrap;
+			word-wrap: break-word
+			}
+
+		q {
+			quotes: none
+			}
+
+		q:before, q:after {
+			content: "";
+			content: none
+			}
+
+		small {
+			font-size: 80%
+			}
+
+		sub, sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+			}
+
+		sup {
+			top: -0.5em
+			}
+
+		sub {
+			bottom: -0.25em
+			}
+
+		dl, menu, ol, ul {
+			margin: 1em 0
+			}
+
+		dd {
+			margin: 0 0 0 40px
+			}
+
+		menu, ol, ul {
+			padding: 0 0 0 40px
+			}
+
+		nav ul, nav ol {
+			list-style: none;
+			list-style-image: none
+			}
+
+		img {
+			border: 0;
+			-ms-interpolation-mode: bicubic
+			}
+
+		svg:not(:root) {
+			overflow: hidden
+			}
+
+		figure {
+			margin: 0
+			}
+
+		form {
+			margin: 0
+			}
+
+		fieldset {
+			border: 1px solid #c0c0c0;
+			margin: 0 2px;
+			padding: .35em .625em .75em
+			}
+
+		legend {
+			border: 0;
+			padding: 0;
+			white-space: normal;
+			*margin-left: -7px
+			}
+
+		button, input, select, textarea {
+			font-size: 100%;
+			margin: 0;
+			vertical-align: baseline;
+			*vertical-align: middle
+			}
+
+		button, input {
+			line-height: normal
+			}
+
+		button, html input[type="button"], input[type="reset"], input[type="submit"] {
+			-webkit-appearance: button;
+			cursor: pointer;
+			*overflow: visible;
+			}
+
+		button[disabled], input[disabled] {
+			cursor: default
+			}
+
+		input[type="checkbox"], input[type="radio"] {
+			box-sizing: border-box;
+			padding: 0;
+			*height: 13px;
+			*width: 13px
+			}
+
+		input[type="search"] {
+			-webkit-appearance: textfield;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box
+			}
+
+		input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+			-webkit-appearance: none
+			}
+
+		button::-moz-focus-inner, input::-moz-focus-inner {
+			border: 0;
+			padding: 0
+			}
+
+		textarea {
+			overflow: auto;
+			vertical-align: top
+			}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+			}
+
+		/*page*/
+		html, body {
+			overflow: hidden;
+			margin: 0;
+			}
+
+		body {
+			font-family: "Open Sans", "Helvetica Neue", "Hiragino Sans GB", "LiHei Pro", Arial, sans-serif;
+			color: #333;
+			}
+
+		#wrapper {
+			position: absolute;
+			left: 0;
+			width: 320px;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			margin-left: -160px;
+			margin-top: -160px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+			z-index: 1000;
+			}
+
+		h1 {
+			font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+			font-weight: 700;
+			font-size: 30px;
+			letter-spacing: 9px;
+			text-transform: uppercase;
+			margin: 12px 0;
+			left: 4px;
+			}
+
+		h2 {
+			color: #333;
+			font-weight: normal;
+			font-size: 15px;
+			letter-spacing: .12em;
+			margin-bottom: 30px;
+			left: 3px;
+			}
+
+		h1, h2 {
+			position: relative;
+			}
+
+		p {
+			font-size: 14px;
+			line-height: 2em;
+			margin: 0;
+			letter-spacing: 2px;
+			}
+
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			}
+
+		a {
+			color: #333;
+			text-decoration: none;
+			transition: color .2s ease;
+			}
+
+		.dk {
+			color: #333;
+			}
+
+		.cord {
+			color: #333;
+			}
+
+		.cord:hover {
+			color: #f33;
+			}
+	</style>
+	<script type="text/javascript">(function (d, w, c) {
+			(w[c] = w[c] || []).push(function () {
+				try {
+					w.yaCounter32877390 = new Ya.Metrika({
+						id: 32877390,
+						clickmap: true,
+						trackLinks: true,
+						accurateTrackBounce: true,
+						webvisor: true,
+						trackHash: true
+					});
+				} catch (e) {
+				}
+			});
+			var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+				n.parentNode.insertBefore(s, n);
+			};
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://mc.yandex.ru/metrika/watch.js";
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else {
+				f();
+			}
+		})(document, window, "yandex_metrika_callbacks");</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/32877390" style="position:absolute; left:-9999px;" alt=""/></div>
+	</noscript>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="wrapper">
+	<h1><span class="dk">D</span>mitriy <span class="dk">K</span>epov</h1>
+	<h2>Embodiment of your ideas</h2>
+	<p><a href="tel:+79146760234">tel:&nbsp;<span class="cord">89146760234</span></a></p>
+	<p><a href="mailto:dkepov@mail.ru">mail:&nbsp;<span class="cord">dkepov@mail.ru</span></a></p>
+	<p><a href="skype:dkepov">skype:&nbsp;<span class="cord">dkepov</span></a></p>
+</div>
+<script>
+	(function () {
+		a = document.getElementById("canvas");
+		c = a.getContext("2d");
+		a.width = window.innerWidth;
+		a.height = window.innerHeight;
+
+		var goal,
+			followers = [],
+			count = 400,
+			md = 0,
+			mx = a.width / 2,
+			my = a.height / 2,
+			tick = 0,
+			hue = rand(0, 360);
+
+		function rand(min, max) {
+			return Math.random() * ( max - min ) + min;
+		}
+
+		function Goal() {
+			this.x = a.width / 2;
+			this.y = a.height + 10;
+			this.ax = 0;
+			this.ay = 0;
+			this.vx = 0;
+			this.vy = 0;
+			this.r = 1;
+		}
+
+		Goal.prototype.step = function () {
+			this.ax += rand(-0.4, 0.4);
+			this.ay += rand(-0.4, 0.4);
+			this.vx += this.ax;
+			this.vy += this.ay;
+			this.ax *= Math.abs(this.ax) > 3 ? 0.75 : 1;
+			this.ay *= Math.abs(this.ay) > 3 ? 0.75 : 1;
+			this.vx *= Math.abs(this.vx) > 5 ? 0.75 : 1;
+			this.vy *= Math.abs(this.vy) > 5 ? 0.75 : 1;
+			this.x += this.vx;
+			this.y += this.vy;
+			if (this.x + this.r >= a.width || this.x <= this.r) {
+				this.vx = 0;
+				this.ax = 0;
+			}
+			if (this.y + this.r >= a.height || this.y <= this.r) {
+				this.vy = 0;
+				this.ay = 0;
+			}
+			if (this.x + this.r >= a.width) {
+				this.x = a.width - this.r;
+			}
+			if (this.x <= this.r) {
+				this.x = this.r;
+			}
+			if (this.y + this.r >= a.height) {
+				this.y = a.height - this.r;
+			}
+			if (this.y <= this.r) {
+				this.y = this.r;
+			}
+
+			if (md) {
+				this.vx += ( mx - this.x ) * 0.02;
+				this.vy += ( my - this.y ) * 0.02;
+			}
+		};
+
+		function Follower(leader, r, d) {
+			this.x = a.width / 2;
+			this.y = a.height / 2;
+			this.vx = 0;
+			this.vy = 0;
+			this.r = r;
+			this.leader = leader;
+			this.damp = d;
+		}
+
+		Follower.prototype.step = function () {
+			this.vx = ( this.leader.x - this.x ) * this.damp;
+			this.vy = ( this.leader.y - this.y ) * this.damp;
+			this.x += this.vx;
+			this.y += this.vy;
+		};
+
+		function loop() {
+			requestAnimationFrame(loop);
+
+			goal.step();
+			goal.step();
+
+			c.globalCompositeOperation = "lighter";
+			c.beginPath();
+			c.moveTo(followers[0].x, followers[0].y);
+			followers.forEach(function (follower, i) {
+				follower.step();
+				if (i > 0) {
+					c.lineTo(follower.x, follower.y);
+				}
+			});
+			c.lineWidth = 1.0;
+			c.strokeStyle = "hsla(" + ( hue + rand(-10, 10) ) + ", " + rand(15, 80) + "%, " + rand(10, 80) + "%, " + rand(0.01, 0.05) + ")";
+			c.stroke();
+
+			tick++;
+		}
+
+		function reset() {
+			c.clearRect(0, 0, a.width, a.height);
+			goal.x = a.width / 2;
+			goal.y = a.height + 10;
+			followers.forEach(function (follower, i) {
+				follower.x = a.width / 2
+				follower.y = a.height + 10;
+			});
+		}
+
+		goal = new Goal();
+
+		for (var i = 0; i < count; i++) {
+			var leader = ( i == 0 ) ? goal : followers[i - 1],
+				r = 1 + ( ( count - i ) / count ) * 10,
+				d = ( i == 0 ) ? 0.05 : 0.4;
+			followers.push(new Follower(leader, r, d));
+		}
+
+		window.addEventListener("mousedown", function () {
+			hue = rand(0, 360);
+			reset();
+			md = 1;
+		});
+
+		window.addEventListener("mouseup", function () {
+			md = 0;
+		});
+
+		window.addEventListener("mousemove", function (e) {
+			mx = e.clientX;
+			my = e.clientY;
+		});
+
+		loop();
+		reset();
+	})();
+</script>
+</body>
+</html>
