@@ -302,6 +302,21 @@
 			letter-spacing: 2px;
 			}
 
+        aside {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+            -webkit-text-fill-color: inherit;
+            background-color: #77fc0300;
+            background-clip: border-box;
+        }
+
 		canvas {
 			position: absolute;
 			top: 0;
@@ -362,6 +377,7 @@
 </head>
 <body>
 <canvas id="canvas"></canvas>
+<aside id="sheet"></aside>
 <div id="wrapper">
 	<h1><span class="dk">D</span>mitriy <span class="dk">K</span>epov</h1>
 	<h2>Embodiment of your ideas</h2>
